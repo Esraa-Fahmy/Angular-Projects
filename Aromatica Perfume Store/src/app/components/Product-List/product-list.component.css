@@ -1,0 +1,16 @@
+.product-list-container {
+  width: 90%; 
+  margin-top: 100px;
+  padding: 20px;
+  background-color: #eee7e7;
+  border-radius: 8px;
+}
+
+.product-list-table {
+  width: 100%;
+}
+
+.product-list-table th, .product-list-table td {
+  padding: 8px;
+  border-bottom: 1px solid #4d4b4b;
+}

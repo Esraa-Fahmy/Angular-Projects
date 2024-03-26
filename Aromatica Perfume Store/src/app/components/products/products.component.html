@@ -1,0 +1,24 @@
+
+  <div class="row equal-height justify-content-center text-center">
+    <div class="col-md-4 col-sm-6 mb-5" *ngFor="let item of myData$ | async">
+      <a [routerLink]="['/details', item.id]" class="card-link">
+        <div class="card card-hover-transition">
+          <img [src]="item.image" class="card-img-top" alt="{{ item.title }}"  />
+          <div class="card-body para">
+            <h3 class="card-title">{{ item.title }}</h3>
+            <h6 class="card-text">
+              {{ item.description | slice : 0 : 30
+              }}{{ item.description.length > 30 ? "..." : "" }}
+            </h6>
+            <h6 class="card-text">Price: {{ item.price }}$</h6>
+            <h6 class="card-text">Quntity: {{ item.Quntity }}</h6>
+
+            <button (click)="addToCart(item)" class="btn btn-primary m-1">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+

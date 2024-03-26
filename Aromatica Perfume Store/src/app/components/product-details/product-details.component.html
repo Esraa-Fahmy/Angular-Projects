@@ -1,0 +1,24 @@
+<div class="container  text-center" *ngIf="productDetails">
+  <div class="col-md-4 col-sm-6 mb-5">
+    <div class="card">
+      <img
+        [src]="productDetails.image"
+        class="card-img-top"
+        alt="{{ productDetails.title }}"
+      />
+      <div class="card-body para">
+        <h5 class="card-title">{{ productDetails.title }}</h5>
+        <p class="card-text">{{ productDetails.description }}</p>
+        <p class="card-text">Price: {{ productDetails.price }}$</p>
+        <p class="card-text">Quntity : {{ productDetails.Quntity }}</p>
+
+        <a
+          routerLink="/cart"
+          (click)="addToCart(productDetails)"
+          class="btn btn-primary m-1"
+          >Add to Cart</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

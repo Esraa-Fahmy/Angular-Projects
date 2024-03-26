@@ -1,0 +1,5 @@
+[
+  { "id": 1, "name": "Guess Perfume" , "description" : "This is Guess Perfume","price": 900, "quntity": 8},
+  { "id": 2, "name": "Zara Perfume" , "description": "This is Zara Perfume" , "price": 6000, "quntity": 3},
+  { "id": 3, "name": "PK Perfume"," description": "This is PK Perfume"," price": 990, "quntity": 2}
+]

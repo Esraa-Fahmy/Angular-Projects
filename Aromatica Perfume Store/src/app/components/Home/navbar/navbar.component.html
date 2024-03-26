@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top p-4 ">
+  <a class="navbar-brand" routerLink="/">
+    <i class="fas fa-store-alt"></i>
+    <span class="mystore">Aromatica</span>
+  </a>
+
+  <button
+    class="navbar-toggler"
+    style="background-color: #9b9b9b"
+    type="button"
+    (click)="toggleNavbar()"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon" style="background-color: #9b9b9b"></span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse  "
+    [ngClass]="{ show: navbarOpen }"
+    id="navbarNav"
+
+  >
+  <a class="nav-link " routerLink="/" style="margin-right: 15px; ">
+    <i class="fas fa-home"></i>
+    Home
+  </a>
+
+    <a class="nav-link " routerLink="product-form" style="margin-right: 15px; ">
+      <i class="fas fa-products "></i>
+      Product Form
+    </a>
+    <a class="nav-link" routerLink="/cart" style="margin-right: 15px;">
+      <i class="fas fa-shopping-cart"></i>
+      Cart ({{ cartItemsCount }})
+    </a>
+
+    <a class="nav-link" routerLink="/login">
+      <i class="fas fa-sign-in-alt"></i>
+      Login
+    </a>
+  </div>
+</nav>

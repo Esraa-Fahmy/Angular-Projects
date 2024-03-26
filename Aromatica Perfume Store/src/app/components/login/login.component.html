@@ -1,0 +1,28 @@
+<div class="centered-form-container">
+  <div class="centered-form">
+      <form [formGroup]="loginForm">
+          <div class="mb-3">
+              <label for="email"></label>
+              <input type="email" formControlName="email" placeholder="email" class="form-control rounded-2">
+              <div *ngIf="loginForm.get('email')!.hasError('required') && loginForm.get('email')!.touched" class="text-danger">
+                  Email is required
+              </div>
+              <div *ngIf="loginForm.get('email')!.hasError('email') && (loginForm.get('email')!.touched || loginForm.get('email')!.dirty)" class="text-danger">
+                  Invalid email format
+              </div>
+          </div>
+
+          <div class="mb-3">
+              <label for="password"></label>
+              <input type="password" formControlName="password" placeholder="password" class="form-control rounded-2">
+              <div *ngIf="loginForm.get('password')!.hasError('required') && loginForm.get('password')!.touched" class="text-danger">
+                  Password is required
+              </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <br>
+      </form>
+      <a routerLink="/register" class="btn btn-secondary mt-3">New User? Sign In</a>
+
+  </div>
+</div>
